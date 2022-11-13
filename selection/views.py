@@ -22,9 +22,3 @@ class SelectionViewSet(ModelViewSet):
         'update': [IsAuthenticated(), SelectionPermission()],
         'destroy': [IsAuthenticated(), SelectionPermission()],
     }
-
-    def get_permissions(self):
-        return self.permissions.get(self.action, self.default_permission)
-
-    def get_serializer_class(self):
-        return self.serializer_classes.get(self.action, self.default_serializer)
