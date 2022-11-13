@@ -11,7 +11,7 @@ from rest_framework.permissions import IsAuthenticated
 from ads.models import Category, Ad
 from ads.serializers import AdListSerializer, AdRetrieveSerializer, AdCreateSerializer, AdUpdateSerializer, \
     AdDestroySerializer
-from selection.permission import AdPermission
+from ads.permission import AdPermission
 
 
 def root(request):

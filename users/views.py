@@ -1,7 +1,5 @@
-from rest_framework import permissions, status
+from rest_framework import permissions
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
-from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 
 from users.models import User, Location
