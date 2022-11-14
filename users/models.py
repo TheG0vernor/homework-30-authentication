@@ -31,5 +31,5 @@ class User(AbstractUser):
         verbose_name_plural = 'Пользователи'
 
     def save(self, *args, **kwargs):
-        # self.set_password(self.password)
+        # self.set_password(self.password)  # строчка дополнительного хеширования пароля для создания и редактирования пользователя в админке. любого, кроме созданного в консоли командой createsuperuser
         super().save(*args, **kwargs)
