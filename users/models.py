@@ -31,5 +31,5 @@ class User(AbstractUser):
         verbose_name_plural = 'Пользователи'
 
     def save(self, *args, **kwargs):
-        self.set_password(self.password)
+        # self.set_password(self.password)
         super().save(*args, **kwargs)
