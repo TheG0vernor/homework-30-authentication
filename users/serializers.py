@@ -53,6 +53,9 @@ class UserCreateSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         user = User.objects.create(**validated_data)
 
+        from django.contrib.auth.hashers import make_password
+        user.password = make_password(user.password)
+
         for i in self._locations:
             location_obj, _ = Location.objects.get_or_create(
                 name=i,
